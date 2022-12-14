@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        form {
+            border: 3px solid #e47070;
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+          }
+          
+          input[type=text], input[type=password] ,input[type=email]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+          }
+          
+          button {
+            background-color: #04aa44;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+          }
+          
+          button:hover {
+            opacity: 0.8;
+          }
+          
+    
+          .imgcontainer {
+            text-align: center;
+            margin: auto;
+            width: 40%;
+            height: 25%;
+          }
+          
+          img.profile {
+            width: 40%;
+            border-radius: 50%;
+          }
+          
+          .container {
+            padding: 16px;
+          }
+          
+          
+          @media screen and (max-width: 300px) {
+            span.psw {
+              display: block;
+              float: none;
+            }
+          }
+          #heading{
+            text-align: center;
+            color: blueviolet;
+          }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div class="imgcontainer">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTPzBF74hA1avhZGbDvPRJK-cAaN7KL9I8ew&usqp=CAU" alt="Avatar" class="profile">
+        </div>
+
+        <h1 id="heading">Register</h1>
+      
+        <div class="container">
+          <label for="fname"><b>First Name</b></label>
+          <input type="text" placeholder="Enter Firstname" name="fname" required>
+          <label for="lname"><b>Last Name</b></label>
+          <input type="text" placeholder="Enter Lastname" name="lname" required>
+
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email id" name="email  " required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="cpsw"><b>Confirm Password</b></label>
+          <input type="password" placeholder="Confirm Password" name="psw" required>
+      
+          <button type="submit">SignUp</button>
+
+          <h4>Already Have Account? <a href="C:\Users\hp\Desktop\masai_unit2_project\HTML\login.html">SignIn</a></h4>
+          
+          
+        </div>
+      
+        
+      </form>
+</body>
+</html>
