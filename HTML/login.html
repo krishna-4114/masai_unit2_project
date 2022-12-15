@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        form {
+            border: 3px solid #e47070;
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+          }
+          
+          input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+          }
+          
+          button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+          }
+          
+          button:hover {
+            opacity: 0.8;
+          }
+          
+    
+          .imgcontainer {
+            text-align: center;
+            margin: auto;
+            width: 40%;
+            height: 25%;
+          }
+          
+          img.avatar {
+            width: 40%;
+            border-radius: 50%;
+          }
+          
+          .container {
+            padding: 16px;
+          }
+          
+         
+          span.psw {
+            float: left;
+            padding-top: 16px;
+          }
+          
+          
+          @media screen and (max-width: 300px) {
+            span.psw {
+              display: block;
+              float: none;
+            }
+          }
+          #heading{
+            text-align: center;
+            color: blueviolet;
+          }
+          #container1{
+            float: right;
+          }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In Page</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div class="imgcontainer">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTPzBF74hA1avhZGbDvPRJK-cAaN7KL9I8ew&usqp=CAU" alt="Avatar" class="avatar">
+        </div>
+
+        <h1 id="heading">SignIn</h1>
+      
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+          <div id="container1" style="background-color:white">
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+
+          <h3>New to Shepora <a href="C:\Users\hp\Desktop\masai_unit2_project\HTML\signup.html">Register</a></h3>
+        </div>
+      
+        
+      </form>
+</body>
+</html>
