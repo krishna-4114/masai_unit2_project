@@ -3,11 +3,6 @@
 
 <head>
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
         .heading {
             text-align: center;
             background-color: blue;
@@ -22,14 +17,124 @@
         }
 
         #nav-cont {
-            display: flex;
-            justify-content: space-between;
-            padding: 0px 10px 0px 10px;
             background-color: black;
             color: aliceblue;
-            width: 98%;
+            text-align: left;   
+        }
+        #nav-cont ul{
+            display: inline-flex;
+            list-style: none;
+            color: #fff;
+        }
+        #nav-cont ul li {
+            width: 105px;
+            margin: 1px;
+            padding: 1px;
+        }
+        #nav-cont ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .horizontal-scroll {
+            width: 100%;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
             margin: auto;
         }
+
+        .horizontal-scroll .btn-scroll {
+            background-color: brown;
+            color: black;
+            box-shadow: 0 0 10px #999;
+            padding: 5px 8px;
+            border: 0;
+            border-radius: 50%;
+            margin: 0 5px 10px 0;
+            z-index: 1;
+            cursor: pointer;
+            transition: 5s;
+        }
+
+        .storys-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            transition: 2s all ease-out;
+        }
+
+        .story-circle {
+            width: 600px;
+            height: 600px;
+            margin: 15px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .story-circle img {
+            width: 100%;
+            height: 400px;
+        }
+
+        #product-cont {
+            display: flex;
+            width: 95%;
+            height: 480px;
+            align-items: center;
+            margin: auto;
+            overflow-x: auto;
+            overflow-y: hidden;
+            
+
+        }
+
+        #product-cont img {
+            width: 300px;
+            height: 200px;
+        }
+
+        #product-cont>div {
+            width: auto;
+            height: 450px;
+            text-align: center;
+            margin: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+        }
+        #nav-cont ul li:hover{
+            background: gray;
+            border-radius: 4px;
+
+        }
+        .dropdown{
+            display: none;
+        }
+        #nav-cont ul li:hover .dropdown{
+            display: block;
+            position: absolute;
+            background: rgb(0,100,150);
+            margin-top: auto;
+        }
+
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,30 +146,184 @@
     <h3 class="heading"><b>Join Beauty Insider and get 20% off* Full-Size Fragrances with code FRAGRANCE20.</b> *Terms
         apply. <b>SEE DETAILS</b></h3>
     <div id="icon-cont">
-        <div style="font-size: x-large;"><b>S H E P H O R A</b> </div>
+        <div><img src="C:\Users\hp\Desktop\masai_unit2_project\CSS\Images\logo.jpeg" alt="" style="width: 100px"> </div>
         <input style="width: 50%; height:30%" type="search" id="gsearch" name="search" placeholder="🔍 Search">
         <h3>🏢 Stores & Services</h3>
         <h3>👨‍👧‍👧 Community</h3>
         <div>
             <h3>🖼<a href="C:\Users\hp\Desktop\masai_unit2_project\HTML\login.html">SignIn</a></h3>
+            <h3>🛒<a href="C:\Users\hp\Desktop\masai_unit2_project\HTML\cart.html">Cart</a></h3>
         </div>
     </div>
 
     <div id="nav-cont">
-        <p><b>New</b></p>
-        <p><b>Brand</b></p>
-        <p><b>Makeup</b></p>
-        <p><b>Skincare</b></p>
-        <p><b>Hair</b></p>
-        <p><b>Fragrance</b></p>
-        <p><b>Tools & Brushes</b></p>
-        <p><b>Bath & Body</b></p>
-        <p><b>Mini Size</b></p>
-        <p><b>Gifts</b></p>
-        <p><b>Beauty Under 20$</b></p>
-        <p>Sales & Offers</p>
+        <ul>
+            <li class="active"><a href="#"> New</a></li>
+            <li><a href="#">Brand</a></li>
+            <li><a href="#">Makeup</a></li>
+            <li><a href="#">Skincare</a></li>
+            <li><a href="#">Hair</a></li>
+            <li><a href="#">Fragrance</a></li>
+            <li><a href="#">Tools & Brushes</a></li>
+            <li><a href="#">Bath & Body</a></li>
+            <li><a href="#">Mini Size</a></li>
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">Beauty Under 20$</a></li>
+            <li><a href="#">Sales & Offers</a></li>
+        </ul>
+    </div>
+
+    <div class="dropdown">
+        <ul>
+            <li>New Makeup</li>
+            <li>Brands A-Z</li>
+            <li>All face Makeup</li>
+            <li>All Skincare</li>
+            <li>Hair Mask & Styling</li>
+            <li>All fragrances</li>
+            <li>Brushes & Applicators</li>
+            <li>Body Wash & showergel</li>
+            <li>All mini size</li>
+            <li>Top rated Gifts</li>
+            <li>Makeup under $20</li>
+            <li>All Sale</li>
+            <li>BB & CC Creams</li>
+            <li>Black owned brands</li>
+            <li>Value & Gift Sets</li>
+        </ul>
+
 
     </div>
+    <div class="horizontal-scroll">
+        <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(1)"><i
+                class="fas fa-chevron-left"></i></button>
+        <button class="btn-scroll" id="btn-scroll-right" onclick="scrollHorizontally(-1)"><i
+                class="fas fa-chevron-right"></i></button>
+        <div class="storys-container">
+            <div class="story-circle"><img
+                    src="https://www.sephora.com/contentimages/2022-12-06-slotting-gifts-by-price-site-rwd-hp-hero-banner-4-product-english-us-handoff_01.jpg?imwidth=545"
+                    alt=""></div>
+            <div class="story-circle"><img
+                    src="https://www.sephora.com/contentimages/2022-12-06-slotting-gifts-by-price-site-rwd-hp-hero-banner-4-product-english-us-handoff_01.jpg?imwidth=545"
+                    alt=""></div>
+            <div class="story-circle"><img
+                    src="https://www.sephora.com/contentimages/2022-12-06-slotting-gifts-by-price-site-rwd-hp-hero-banner-4-product-english-us-handoff_01.jpg?imwidth=545"
+                    alt=""></div>
+            <div class="story-circle"><img
+                    src="https://www.sephora.com/contentimages/2022-12-20off-frag-site-home-page-hero-banner.jpg?imwidth=545"
+                    alt=""></div>
+            <div class="story-circle"><img
+                    src="https://www.sephora.com/contentimages/2022-12-20off-frag-site-home-page-hero-banner.jpg?imwidth=545"
+                    alt=""></div>
+            <div class="story-circle"><img
+                    src="https://www.sephora.com/contentimages/2022-12-20off-frag-site-home-page-hero-banner.jpg?imwidth=545"
+                    alt=""></div>
+
+        </div>
+    </div>
+    <div id="product-cont">
+
+    </div>
+
+    <script>
+
+        let currentScrollPosition = 0;
+        let scrollAmount = 160;
+
+        const scont = document.querySelector(".storys-container");
+        const hScroll = document.querySelector(".horizontal-scroll");
+        const btnScrollLeft = document.querySelector("#btn-scroll-left");
+        const btnScrollRight = document.querySelector("#btn-scroll-right")
+
+        btnScrollLeft.style.opacity = "0"
+
+        let maxScroll = -scont.offsetWidth + hScroll.offsetWidth;
+
+        function scrollHorizontally(val) {
+            currentScrollPosition += (val * scrollAmount);
+
+            if (currentScrollPosition >= 0) {
+                currentScrollPosition = 0;
+                btnScrollLeft.style.opacity = "0"
+            }
+            else {
+                btnScrollLeft.style.opacity = "1"
+            }
+            if (currentScrollPosition <= maxScroll) {
+                currentScrollPosition = maxScroll;
+                btnScrollRight.style.opacity = "0"
+            }
+            else {
+                btnScrollRight.style.opacity = "1"
+            }
+            scont.style.left = currentScrollPosition + "px"
+        }
+        let pcontainer = document.getElementById("product-cont");
+
+        fetch("https://639b04c131877e43d67f45fb.mockapi.io/Products")
+            .then((responseobject) => {
+                return responseobject.json();
+            })
+            .then((acctualData) => {
+                acctualData;
+                displayproducts(acctualData)
+                console.log(acctualData);
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+        function displayproducts(data) {
+            pcontainer.innerhtml = null
+            data.forEach((element) => {
+                let card = document.createElement("div");
+                card.setAttribute("class", "card")
+
+                let image = document.createElement("img");
+                image.setAttribute("src", element.image);
+                let name = document.createElement("h2");
+                name.innerText = element.name;
+
+                let details = document.createElement("p");
+                details.innerText = element.Description;
+
+                let category = document.createElement("p");
+                category.innerText = element.Category;
+
+                let price = document.createElement("h3");
+                price.innerText = element.Price;
+
+                let cart = document.createElement("button")
+                cart.innerText = "Add to Cart"
+
+                cart.addEventListener("click",() =>{
+                    let cartData = JSON.parse(localStorage.getItem("cart"));
+        
+                    if(cartData === null) cartData = [];
+        
+                    let isAdleadyInCart = false;
+                    for(let i=0;i<cartData.length;i++){
+                      if(cartData[i].id === element.id){
+                        isAdleadyInCart = true;
+                        break;
+                      };
+                    }
+        
+                    if(isAdleadyInCart === true){
+                      alert("Product Already in Cart");
+                    }else{
+                    cartData.push({...element,quantity:1});
+                    localStorage.setItem("cart",JSON.stringify(cartData));
+                    alert("Product Added To Cart");
+                    }
+                  })
+
+
+                card.append(image, name, details, category, price,cart)
+                pcontainer.append(card);
+            })
+        }
+
+    </script>
 </body>
 
 </html>
